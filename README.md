@@ -2,14 +2,6 @@
 
 Scan your project dependencies for outdated versions and security vulnerabilities (CVE).
 
-## Features
-
-- Python (`requirements.txt`) support
-- Node.js (`package.json`) support
-- CVE detection via [OSV.dev](https://osv.dev)
-- CVSS severity scoring
-- Fast batch vulnerability queries
-
 ## Installation
 
 ```bash
@@ -20,17 +12,21 @@ pip install depwatch
 
 ```bash
 cd your-project
-depwatch scan
+depwatch
 ```
 
 ## Supported Ecosystems
 
-| Language   | File             | Status |
-|------------|------------------|--------|
-| Python     | requirements.txt | stable |
-| JavaScript | package.json     | stable |
-| Dart       | pubspec.yaml     | soon   |
-| Rust       | Cargo.toml       | soon   |
+| Language   | File             |
+|------------|------------------|
+| Python     | requirements.txt |
+| JavaScript | package.json     |
+| Dart       | pubspec.yaml     |
+| Rust       | Cargo.toml       |
+
+## How it works
+
+depwatch walks your project directory, detects dependency files, and queries [OSV.dev](https://osv.dev) for known vulnerabilities. Results are displayed as a table with CVE IDs and CVSS severity scores.
 
 ## License
 
