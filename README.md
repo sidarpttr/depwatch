@@ -27,7 +27,3 @@ depwatch
 ## How it works
 
 depwatch walks your project directory, detects dependency files, and queries [OSV.dev](https://osv.dev) for known vulnerabilities. Results are displayed as a table with CVE IDs and CVSS severity scores.
-
-## License
-
-MIT
